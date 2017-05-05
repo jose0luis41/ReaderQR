@@ -1,6 +1,4 @@
-package com.example.joseluissacanamboy.qrcodereader;
-
-import android.net.http.AndroidHttpClient;
+package com.example.joseluissacanamboy.qrcodereader.utils;
 
 import com.appspot.echo_backend.echo.Echo;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -16,7 +14,7 @@ public class TicketSingleton {
     public static Echo getInstance(){
         if(myApiService ==null){
             Echo.Builder builder = new Echo.Builder(AndroidHttp.newCompatibleTransport(),
-                    new AndroidJsonFactory(),null).setRootUrl("https://disco-web.appspot.com:8080/_ah/api");
+                    new AndroidJsonFactory(),null).setRootUrl("https://disco-web.appspot.com/_ah/api");
 
                 myApiService = builder.build();
         }

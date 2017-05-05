@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/QRCodeReader.iml" filepath="$PROJECT_DIR$/QRCodeReader.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/echo-v1-1.22.0-SNAPSHOT/echo-v1-1.22.0-SNAPSHOT.iml" filepath="$PROJECT_DIR$/echo-v1-1.22.0-SNAPSHOT/echo-v1-1.22.0-SNAPSHOT.iml" />
     </modules>
   </component>
 </project>
-

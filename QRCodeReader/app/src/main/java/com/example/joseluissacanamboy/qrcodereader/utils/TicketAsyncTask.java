@@ -1,7 +1,6 @@
-package com.example.joseluissacanamboy.qrcodereader;
+package com.example.joseluissacanamboy.qrcodereader.utils;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.appspot.echo_backend.echo.model.Entrada;
 import com.google.api.client.http.HttpResponseException;

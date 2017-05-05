@@ -4,18 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.joseluissacanamboy.qrcodereader.utils.AsyncTaskUI;
+import com.example.joseluissacanamboy.qrcodereader.utils.TicketAsyncTask;
+import com.example.joseluissacanamboy.qrcodereader.utils.UsersAsyncTask;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import com.appspot.echo_backend.echo.Echo;
-
-import java.io.IOException;
-
-
 
 
 public class ReaderActivity extends Activity implements AsyncTaskUI {
@@ -51,6 +51,10 @@ public class ReaderActivity extends Activity implements AsyncTaskUI {
 
 
         });
+
+        Log.d("csacanam", "Hola");
+        UsersAsyncTask usersAsyncTask = new UsersAsyncTask(ReaderActivity.this);
+        usersAsyncTask.execute();
     }
 
 
@@ -67,7 +71,7 @@ public class ReaderActivity extends Activity implements AsyncTaskUI {
 
             }else {
                 String parameter = intentResult.getContents();
-                parameter = parameter.replace(" ","%");
+                //parameter = parameter.replace(" ","%");
 
 
                 TicketAsyncTask ticket = new TicketAsyncTask(ReaderActivity.this);
